@@ -1,0 +1,46 @@
+<div class="container p-5">
+
+  <form (ngSubmit)="onSubmit(loginForm)" [formGroup]="loginForm">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-12">
+          <label for="FormControlInput1">Email</label>
+          <input
+            formControlName="emailInput"
+            type="text"
+            placeholder="Please Enter Email"
+          />
+        </div>
+        <div class="col-md-12">
+          <label for="FormControlInput1">Password</label>
+          <input
+            type="password"
+            formControlName="passwordInput"
+            placeholder="Please Enter Password"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-check pading-1">
+          <input type="checkbox" class="form-check-input" id="Check1" />
+          <label class="form-check-label pb-0" for="Check1">Remember me</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-button m-0">
+          <p class="text-right clr">
+            <a href="">Forget UserName</a> / <a href="">Password</a> ?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="form-bttn text-center">
+      <button type="submit" class="ibtn" [disabled]="loginForm.invalid">
+        Sign in
+      </button>
+    </div>
+  </form>
+
+</div>
